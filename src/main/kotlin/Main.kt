@@ -46,15 +46,35 @@ O asterisco no pacote na função indica que usaremos todas as funções daquele
 
 
 fun main(args: Array<String>) {
-    println("Hello World!")
+//    println("Hello World!")
+//    val nome: String
+//    var fun1 = 1
+//
+//    showTypes()
+//    var tamanhoDeCalcado: Short = 128
     val nome = "Rafael"
+
+    imprimirNome(nome)
+    println(retornaNome(nome))
+    println(tamanhoDaString("   Qualquer coisa   "))
+    println(nome[4])
+    println(nome.replace("Rafa", "Joao"))
 
 
 }
 
-fun soma(x:Int, y:Int): Int {
-    return x + y
+fun soma(x:Int, y:Int) = x + y
 
+fun imprimirNome(nome:String) {
+    println("Nome: $nome")
+}
+
+fun retornaNome(nome:String): String {
+    return "Nome: $nome"
+
+}
+fun tamanhoDaString(string: String): Int {
+    return string.trim().length
 }
 
 
@@ -65,5 +85,26 @@ fun soma(x:Float, y:Float): Float {
 
 fun soma(x:Float, y:Float, z:Float): Float {
     return x + y
+
+}
+
+fun showTypes() {
+/*
+Double      64
+Float          32
+Long          64   - ULong
+Int              32   - UInt
+Short         16    - UShort
+Byte           8     - UByte
+Boolean
+String
+Char
+*/
+    println("DoubleMax: ${Double.MAX_VALUE} | DoubleMin: ${Double.MIN_VALUE}")
+    println("FloatMax: ${Float.MAX_VALUE} | FloatMin: ${Float.MIN_VALUE}")
+    println("LongMax: ${Long.MAX_VALUE} | LongMin: ${Long.MIN_VALUE}")
+    println("IntMax: ${Int.MAX_VALUE} | IntMin: ${Int.MIN_VALUE}")
+    println("ShortMax: ${Short.MAX_VALUE} | ShortMin: ${Short.MIN_VALUE}")
+    println("ByteMax: ${Byte.MAX_VALUE} | ByteMin: ${Byte.MIN_VALUE}")
 
 }
