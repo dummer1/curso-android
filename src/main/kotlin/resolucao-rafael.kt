@@ -11,7 +11,8 @@ fun main() {
     cubo()
     conversaoMilhasKm()
     println("Digite uma string:")
-    substituir(readln())
+    substituir("texto aqui")
+
 
 }
 
@@ -93,6 +94,6 @@ b. Escrever uma função para a troca de letras e impressão do valor final.
 c. String final deve estar com todas as letras minúsculas.
  */
 
-fun substituir(texto: String){
+fun substituir(texto: String) {
     println(texto.lowercase().replace("a", "x"))
 }
