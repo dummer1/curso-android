@@ -22,7 +22,8 @@ Se a entrada do programa for 5, teremos:
 fun main() {
    //exercicio1()
     //exercicio1_1()
-    exercicio2()
+    //exercicio2()
+    exercicio3()
 }
 
 fun exercicio1() {
@@ -44,5 +45,14 @@ fun exercicio1_1() {
 fun exercicio2() {
     for (number in 50 downTo 1) {
         print("$number ")
+    }
+}
+
+
+fun exercicio3() {
+    for (number in 1..50) {
+        if (number % 5 != 0) {
+            print("$number ")
+        }
     }
 }
