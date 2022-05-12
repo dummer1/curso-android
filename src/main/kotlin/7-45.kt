@@ -23,7 +23,8 @@ fun main() {
    //exercicio1()
     //exercicio1_1()
     //exercicio2()
-    exercicio3()
+    //exercicio3()
+    exercicio4()
 }
 
 fun exercicio1() {
@@ -55,4 +56,12 @@ fun exercicio3() {
             print("$number ")
         }
     }
+}
+
+fun exercicio4() {
+    var total = 0
+    for (index in 1..500) {
+        total += index
+    }
+    print("total: $total")
 }
