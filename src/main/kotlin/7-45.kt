@@ -21,10 +21,20 @@ Se a entrada do programa for 5, teremos:
 
 fun main() {
    //exercicio1()
+    exercicio1_1()
 }
 
 fun exercicio1() {
     for (number in 1..50) {
         print("$number ")
+    }
+}
+
+
+fun exercicio1_1() {
+    var index = 0
+    while (index < 50) {
+        index++
+        print("$index ")
     }
 }
