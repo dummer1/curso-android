@@ -21,7 +21,8 @@ Se a entrada do programa for 5, teremos:
 
 fun main() {
    //exercicio1()
-    exercicio1_1()
+    //exercicio1_1()
+    exercicio2()
 }
 
 fun exercicio1() {
@@ -36,5 +37,12 @@ fun exercicio1_1() {
     while (index < 50) {
         index++
         print("$index ")
+    }
+}
+
+
+fun exercicio2() {
+    for (number in 50 downTo 1) {
+        print("$number ")
     }
 }
