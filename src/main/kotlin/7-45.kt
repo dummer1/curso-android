@@ -20,11 +20,13 @@ Se a entrada do programa for 5, teremos:
 */
 
 fun main() {
-   //exercicio1()
+    //exercicio1()
     //exercicio1_1()
     //exercicio2()
     //exercicio3()
-    exercicio4()
+    //exercicio4()
+    //exercicio5()
+    exercicio5_1()
 }
 
 fun exercicio1() {
@@ -64,4 +66,48 @@ fun exercicio4() {
         total += index
     }
     print("total: $total")
+}
+
+fun exercicio5() {
+    val steps = getSteps()
+    printNormalSteps(steps)
+}
+
+fun exercicio5_1() {
+    val steps = getSteps()
+    val type = getType()
+    if (type == "normal") {
+        printNormalSteps(steps)
+    } else {
+        printInvertedSteps(steps)
+    }
+}
+
+
+fun getSteps(): Int {
+    print("digite a quantidade de degraus: ")
+    return readLine()?.toInt()!!
+}
+
+fun getType(): String {
+    print("digite o tipo (normal/invertido): ")
+    return readln()
+}
+
+fun printNormalSteps(steps: Int) {
+    for (index in 1..steps) {
+        for (i in 1..index) {
+            print("#")
+        }
+        println("")
+    }
+}
+
+fun printInvertedSteps(steps: Int) {
+    for (index in steps downTo 1) {
+        for (i in 1..index) {
+            print("#")
+        }
+        println("")
+    }
 }
