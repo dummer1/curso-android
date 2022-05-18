@@ -89,11 +89,24 @@ fun ex39_4() {
     }
     print("Digite o código do convite: ")
     val invitationCode = readln()
+    val clientType = getClientType(invitationCode)
 
-    if (!invitationCode.startsWith("XL") || !invitationCode.startsWith("XT")) {
+    if (clientType.equals("desconhecido")) {
         println("Negado. Convite inválido.")
         return
     }
+    if (clientType.equals("vip")) {
+        println("Bem vindo cliente vip")
+    } else {
+        println("bem vindo")
+    }
 
 
+}
+
+
+fun getClientType(code: String): String {
+    if (code.startsWith("XL")) return "vip"
+    if (code.startsWith("XT")) return "normal"
+    return "desconhecido"
 }
