@@ -26,7 +26,7 @@ d. Caso todos os critérios sejam satisfeitos, exibir “Welcome :)”.
 fun main() {
     //ex39_1()
     //ex39_2()
-    ex39_3(4)
+    //ex39_3(4)
 }
 
 fun ex39_1() {
@@ -69,4 +69,31 @@ fun ex39_3(num: Int) {
         else println("Segunda string")
     }
     println("Terceira string")
+}
+
+fun ex39_4() {
+
+    print("Digite a idade: ")
+    val age = readln().toInt()
+    if (age < 18) {
+        println("Negado. Menores de idade não são permitidos.")
+        return
+    }
+    print("Digite o tipo do convite: ")
+    val invitationType = readln()
+    val types: ArrayList<String> = arrayListOf("comum", "premium", "luxo")
+
+    if (!types.contains(invitationType)) {
+        println("Negado. Convite inválido.")
+        return
+    }
+    print("Digite o código do convite: ")
+    val invitationCode = readln()
+
+    if (!invitationCode.startsWith("XL") || !invitationCode.startsWith("XT")) {
+        println("Negado. Convite inválido.")
+        return
+    }
+
+
 }
